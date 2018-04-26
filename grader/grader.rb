@@ -2,16 +2,11 @@ class Grader
 
     # Initiallizes the variables that that a new object of this class
     # uses, an answer_key and grades - grades set to nil.
+    attr_reader :answer_key
+    attr_reader :grades
     def initialize(answer_key, grades: nil)
-
         @answer_key = answer_key
-        def self.answer_key
-            @answer_key
-        end
         @grades = grades
-        def self.grades
-            @grades
-        end
     end
 
     # Method for scoring a set of answers against the answer_key, and then adding the score
