@@ -34,5 +34,4 @@ def checkFiz(num)
     end
 end
 
-numArr = (1...50).to_a
-numArr.map{|num| doFizzBuzz(num)}
+(1...50).to_a.map{|num| doFizzBuzz(num)}
