@@ -1,14 +1,11 @@
 class FileWriteRead
+    attr_reader :file_name, :str, :num
     
     def initialize(file_name, str, num)
         @file_name = file_name
         @str = str
         @num = num
     end
-
-    attr_reader :file_name
-    attr_reader :str
-    attr_reader :num
 
     def file_writer()
         line = str << "\n"
