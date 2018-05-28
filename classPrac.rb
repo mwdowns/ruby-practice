@@ -1,6 +1,6 @@
 class FileWriteRead
     attr_reader :file_name, :str, :num
-    
+
     def initialize(file_name, str, num)
         @file_name = file_name
         @str = str
@@ -39,14 +39,14 @@ def dialogue ()
         thing.file_writer
         puts "wrote a file"
     else
-        puts "OK"
+        puts "OK. That's cool. You don't want to write a file."
     end
     puts "do you want to know how many lines are in that file?\n"
     answer = gets.chomp
     if answer.upcase == "YES" || answer.upcase == "Y"
         thing.file_line_counter
     else
-        puts "OK"
+        puts "OK. That's cool. You don't want to count the lines."
     end
 end
 
