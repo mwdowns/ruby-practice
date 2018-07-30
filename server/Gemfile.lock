@@ -8,6 +8,7 @@ GEM
       method_source (~> 0.9.0)
     puma (3.12.0)
     rack (2.0.5)
+    rack-unreloader (1.6.0)
     roda (3.10.0)
       rack
 
@@ -18,6 +19,7 @@ DEPENDENCIES
   pry
   puma
   rack
+  rack-unreloader
   roda
 
 BUNDLED WITH

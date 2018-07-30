@@ -13,6 +13,7 @@ class App < Roda
       @greeting = 'hello'
 
       r.get 'world' do
+        @greeting = 'hola'
         "#{@greeting} world!"
       end
 
@@ -27,7 +28,20 @@ class App < Roda
         end
       end
     end
+
+    r.on 'yo' do
+      @greeting = 'yo'
+
+      r.get :name do |name|
+        @name = name
+        "#{@greeting} #{@name}!"
+      end
+
+      r.is do
+        r.get do
+          "#{@greeting}, my man!"
+        end
+      end
+    end
   end
 end
-
-run App.freeze.app
