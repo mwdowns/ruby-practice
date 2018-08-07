@@ -3,9 +3,17 @@ require 'roda'
 class Greeter < Roda
   puts 'hey'
   plugin :multi_route
+  Dir['./routes/*.rb'].each { |f| require f }
 
-  puts 'hey hey hey'
-  route(&:multi_route)
+  route do |r|
+    r.multi_route
+
+    r.root do
+      r.redirect '/hello'
+    end
+  end
 end
 
-Dir['./routes/*.rb'].each { |f| require f }
+# require './routes/index.rb'
+# require './routes/hello.rb'
+# require './routes/yo.rb'
