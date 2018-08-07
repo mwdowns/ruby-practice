@@ -1,4 +1,4 @@
-Greeter.route('yo') do |r|
+Greeter.route '/yo' do |r|
   r.on 'yo' do
     @greeting = 'yo'
 

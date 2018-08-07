@@ -1,6 +1,7 @@
-Greeter.route('hello') do |r|
+Greeter.route '/hello' do |r|
   r.on 'hello' do
-    @greeting = 'hello'
+    puts 'hello'
+    @greeting = 'helloooooooo'
 
     r.get 'world' do
       @greeting = 'hola'
